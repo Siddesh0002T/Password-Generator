@@ -1,11 +1,11 @@
 import random
 import string
 
-def createPass(length):
+def createPass(lth):
 
-    characters = string.ascii_letters + string.digits + string.punctuation
+    chara = string.ascii_letters + string.digits + string.punctuation
     
-    password = ''.join(random.choice(characters) for _ in range(length))
+    password = ''.join(random.choice(chara) for _ in range(lth))
     
     return password
 
@@ -23,7 +23,21 @@ print('''
       [ Github : https://github.com/Siddesh0002T ]
       [Instagram : https://www.instagram.com/Siddhesh0002t ]                                     
 ''')
-length = int(input("Enter the length of the password: "))
+
+def getInput():
+    ch = str(input("Do you want to create password ?(yes/no) : "))
+
+    if(ch=="yes"):
+        lth = int(input("Enter the length of the password: "))
+        print("Generated Password:", createPass(lth))
+        getInput()
+    elif(ch=="no"):
+       print("Thank you for using this program.")
+    else:
+       print("Invalid Input")
+       getInput()
+
+getInput()
 
 
-print("Generated Password:", createPass(length))
+
