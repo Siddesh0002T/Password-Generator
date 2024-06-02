@@ -1,20 +1,29 @@
 import random
 import string
 
-# Define a function to generate a password
 def createPass(length):
 
-    # Define the characters to use in the password
     characters = string.ascii_letters + string.digits + string.punctuation
     
-    # Generate a password of the specified length
     password = ''.join(random.choice(characters) for _ in range(length))
     
-    # Return the generated password
     return password
 
-# Ask the user for the password length
+print('''
+
+ /$$$$$$$                               /$$$$$$                                                     /$$                        
+| $$__  $$                             /$$__  $$                                                   | $$                        
+| $$  \ $$ /$$$$$$   /$$$$$$$ /$$$$$$$| $$  \__/  /$$$$$$  /$$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$ 
+| $$$$$$$/|____  $$ /$$_____//$$_____/| $$ /$$$$ /$$__  $$| $$__  $$ /$$__  $$ /$$__  $$|____  $$|_  $$_/   /$$__  $$ /$$__  $$
+| $$____/  /$$$$$$$|  $$$$$$|  $$$$$$ | $$|_  $$| $$$$$$$$| $$  \ $$| $$$$$$$$| $$  \__/ /$$$$$$$  | $$    | $$  \ $$| $$  \__/
+| $$      /$$__  $$ \____  $$\____  $$| $$  \ $$| $$_____/| $$  | $$| $$_____/| $$      /$$__  $$  | $$ /$$| $$  | $$| $$      
+| $$     |  $$$$$$$ /$$$$$$$//$$$$$$$/|  $$$$$$/|  $$$$$$$| $$  | $$|  $$$$$$$| $$     |  $$$$$$$  |  $$$$/|  $$$$$$/| $$      
+|__/      \_______/|_______/|_______/  \______/  \_______/|__/  |__/ \_______/|__/      \_______/   \___/   \______/ |__/                                         
+                                                                                                     by Siddhesh More.
+      [ Github : https://github.com/Siddesh0002T ]
+      [Instagram : https://www.instagram.com/Siddhesh0002t ]                                     
+''')
 length = int(input("Enter the length of the password: "))
 
-# Generate and print the password
+
 print("Generated Password:", createPass(length))
